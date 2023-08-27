@@ -27,4 +27,14 @@ public class RoomService implements RoomInterface {
     public Room findById(int id){
         return roomDAO.findById(id);
     }
+
+    @Override
+    public void updateRoom(Room room, int id){
+        roomDAO.updateRoom(room, id);
+    }
+
+    @Override
+    public void deleteRoom(int id){
+        roomDAO.deleteRoom(id);
+    }
 }

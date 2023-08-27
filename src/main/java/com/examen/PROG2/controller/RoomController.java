@@ -24,8 +24,18 @@ public class RoomController {
     public void insertRoom(@RequestBody Room room){
         roomInterface.insertClient(room);
     }
+
     @GetMapping("/findById/{id}")
     public Room findById(@PathVariable int id){
         return roomInterface.findById(id);
+    }
+    @PutMapping("/updateRoom/{id}")
+    public void updateRoom(@RequestBody Room room, @PathVariable int id){
+        roomInterface.updateRoom(room, id);
+    }
+
+    @DeleteMapping("/deleteRoom/{id}")
+    public void deleteRoom(@PathVariable int id){
+        roomInterface.deleteRoom(id);
     }
 }

@@ -11,4 +11,8 @@ public interface RoomDAO {
     void insertRoom(Room room);
 
     Room findById(int id);
+
+    void updateRoom(Room room, int id);
+
+    void deleteRoom(int id);
 }

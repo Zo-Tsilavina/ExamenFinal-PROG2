@@ -83,4 +83,35 @@ public class RoomRepository implements RoomDAO{
         }
         return room;
     }
+
+    @Override
+    public void updateRoom(Room room, int id){
+        String sql = "UPDATE Room SET name = ?, isEngaged = ?, description = ? WHERE idRoom = ?";
+        try(
+                PreparedStatement statement = connectionDB.getConnection().prepareStatement(sql);
+        ){
+            statement.setString(1, room.getName());
+            statement.setBoolean(2, room.isEngaged());
+            statement.setString(3, room.getDescription());
+            statement.setInt(4, id);
+            statement.executeUpdate();
+        }
+        catch (SQLException e){
+            e.printStackTrace();
+        }
+    }
+
+    @Override
+    public void deleteRoom(int id){
+        String sql = "DELETE FROM Room WHERE idRoom = ?";
+        try(
+                PreparedStatement statement = connectionDB.getConnection().prepareStatement(sql)
+        ) {
+            statement.setInt(1, id);
+            statement.executeUpdate();
+        }
+        catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 }

@@ -10,4 +10,8 @@ public interface RoomInterface {
     List<Room> getAllRoom();
     void insertClient(Room room);
     Room findById(int id);
+
+    void updateRoom(Room room, int id);
+
+    void deleteRoom(int id);
 }
