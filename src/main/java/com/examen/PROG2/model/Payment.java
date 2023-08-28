@@ -11,4 +11,5 @@ public class Payment {
     private int idPayment;
     private boolean isPaid;
     private Double total;
+    private int idClient_client;
 }

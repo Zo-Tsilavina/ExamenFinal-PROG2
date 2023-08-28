@@ -21,7 +21,7 @@ public class ClientController {
         return clientInterface.getAllClient();
     }
 
-    @PostMapping("/addClient")
+    @PostMapping("/insertClient")
     public void insertClient(@RequestBody  Client client){
         clientInterface.insertClient(client);
     }
