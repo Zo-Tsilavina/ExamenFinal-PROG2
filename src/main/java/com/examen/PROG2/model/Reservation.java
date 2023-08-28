@@ -3,6 +3,7 @@ package com.examen.PROG2.model;
 import lombok.*;
 
 import java.sql.Date;
+import java.sql.Timestamp;
 import java.time.LocalDate;
 
 @AllArgsConstructor
@@ -13,5 +14,8 @@ import java.time.LocalDate;
 public class Reservation {
     private int idReservation;
     private int numberReservation;
-    private LocalDate date;
+    private Timestamp date;
+    private int idClient_client;
+    private int idRoom_room;
+
 }
