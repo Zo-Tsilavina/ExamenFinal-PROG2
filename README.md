@@ -5,7 +5,7 @@
 This application was created to make hotel room reservations
 
 - **MCD**
-![MCD](C:\Users\aQSUS\IdeaProjects\PROG2\BaseDeDonnee\MCD.png)
+![MCD](./BaseDeDonnee/MCD.png)
 
 - **Technology used**
   - DataBase: PostgresSQL
